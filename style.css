@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+ img {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+ }
+
+
+#quiz-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#questionContainer {
+    width: 40%;
+    height: 100%;
+    display: grid;  
+    place-items: center;
+    color: #007bff;
+}
+#question {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+}
+#answer-list {
+    width:60%;
+    list-style: none;
+    padding: 0 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+#answer-list li {
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    max-width: 400px;
+    min-width: 200px;
+    max-height: 300px;
+    min-height: 60px;
+    padding: 10px;
+    background-color:sandybrown;
+    cursor: pointer;
+}
+
+#answer-list li:hover {
+    background-color: black;;
+    transform: scale(1.05);
+    color:yellowgreen;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color:black;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: red;
+    transform: scale(1.1);
+}
+
+.notification {
+    font-size:24px; /* Font size */
+    display: none; /* Hidden by default */
+    position: fixed; /* Positioned relative to the viewport */
+    left: 50%; /* Center the div */
+    top: 20px; /*20px from the bottom */
+    transform: translateX(-50%); /* Align center */
+    background-color: #007bff; /* Blue background */
+    color: yellow; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.notification.show {
+    display: block; /* Show the notification */
+}
